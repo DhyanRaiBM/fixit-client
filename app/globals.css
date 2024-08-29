@@ -26,8 +26,52 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.bg-record {
+  background-image: url('/Record.svg');
+  background-repeat: no-repeat;
+  height: 60vh;
+  background-position: 50%;
+  background-color: #000;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.bg {
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+@keyframes text-reveal {
+  0% {
+    opacity: 1;
+    /* transform: translateY(10px); */
+    /* color: white; */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    color: transparent;
+    background: linear-gradient(to bottom right, #93c5fd, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+.text-reveal {
+  display: inline-block;
+  opacity: 1;
+  animation: text-reveal 1s ease forwards;
 }
