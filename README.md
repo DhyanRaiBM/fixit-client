@@ -1,3 +1,8 @@
+I've deployed this site on vercel. Here is the live site : https://fixit-dhyan.vercel.app/
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
