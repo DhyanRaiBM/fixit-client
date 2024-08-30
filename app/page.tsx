@@ -1,6 +1,7 @@
 'use client'
 import SearchBar from '@/components/SearchBar'
 import { UserButton, useUser } from '@clerk/nextjs'
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 const Homepage = () => {
@@ -9,6 +10,16 @@ const Homepage = () => {
   const [answer, setAnswer] = useState('')
 
   const [displayedText, setDisplayedText] = useState('')
+
+  useEffect(() => {
+    //To wake up the API
+    ;(async function () {
+      const response = await axios.get('https://fixit-api-1d6e.onrender.com/')
+      console.log(response)
+    })()
+
+    console.log('API woke up')
+  }, [])
 
   useEffect(() => {
     let words = answer.split(' ')
