@@ -38,7 +38,7 @@ const SearchBar = ({ setAnswer }: Props) => {
       </div>
 
       {/* Search Bar */}
-      <div className="relative w-3/5 sm:min-w-[60vw] mb-6 ">
+      <div className="relative w-full sm:min-w-[60vw] mb-6 ">
         <input
           type="text"
           value={question}
@@ -55,7 +55,7 @@ const SearchBar = ({ setAnswer }: Props) => {
       </div>
 
       {/* Suggested Topics */}
-      <div className="flex flex-wrap justify-center space-x-2">
+      <div className="flex z-20 flex-wrap max-sm:flex-col gap-1 justify-center space-x-2">
         <span>Try Asking</span>
         {[
           'Budget analysis overview',
@@ -67,7 +67,10 @@ const SearchBar = ({ setAnswer }: Props) => {
           <span
             key={index}
             className="px-4 py-2 mb-2 text-sm text-gray-700 bg-gray-200 rounded-lg cursor-pointer hover:bg-blue-100"
-            onClick={() => setQuestion(topic)}
+            onClick={() => {
+              console.log('got clicked')
+              setQuestion(topic)
+            }}
           >
             {topic}
           </span>

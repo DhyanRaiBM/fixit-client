@@ -197,7 +197,7 @@ const Homepage = () => {
             <div>
               <SearchBar setAnswer={setAnswer} />
             </div>
-            <div className="mb-[100px]">
+            <div className="mb-[100px] max-sm:mt-[50px]">
               {answer && (
                 <div className="bg-gray-100 text-gray-800 p-4 rounded-lg shadow-md max-w-3xl mx-auto">
                   <p className="whitespace-pre-line">{displayedText}</p>
