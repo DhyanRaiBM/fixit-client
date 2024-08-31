@@ -127,9 +127,8 @@ const Homepage = () => {
               <div className="flex  xl:ml-10 pt-[5rem] xl:pt-0 h-fit xl:w-[60%] pb-0 flex-col text-center text-white items-center xl:items-start gap-4 sm:-mt-[2%] justify-center xl:justify-between ">
                 <h3 className="w-full  leading-tight text-[45px] sm:text-[70px] text-center md:text-[70px] xl:text-[50px] md:mt-5 p-0 xl:text-start font-proximaBold -mt-[2%] bg-clip-text text-gray-700 width-[60%]">
                   {text1.split('').map((char, index) => (
-                    <>
+                    <span key={index}>
                       <span
-                        key={index}
                         className="text-reveal font-bold"
                         style={{ animationDelay: `${ind++ * 0.05}s` }}
                       >
@@ -137,21 +136,20 @@ const Homepage = () => {
                       </span>
                       {index === 14 && <br />}
                       {index === 31 && <br />}
-                    </>
+                    </span>
                   ))}
                 </h3>
                 <h3 className="w-full leading-tight text-[30px] sm:text-[30px] text-center md:text-[30px] xl:text-[35px] md:mt-5 p-0 xl:text-start font-proximaBold -mt-[2%] bg-clip-text text-gray-700">
                   {text2.split('').map((char, index) => (
-                    <>
+                    <span key={index}>
                       <span
-                        key={index}
                         className="text-reveal font-bold"
                         style={{ animationDelay: `${ind++ * 0.05}s` }}
                       >
                         {char === ' ' ? '\u00A0' : char}
                       </span>
                       {/* {index === 26 && <br />} */}
-                    </>
+                    </span>
                   ))}
                 </h3>
                 <div
@@ -162,12 +160,12 @@ const Homepage = () => {
                 ></div>
                 <div className="flex flex-row gap-12 md:gap-24">
                   <div>
-                    <button className="text-lg font-bold mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] rounded-sm underline">
+                    <button className="text-lg  font-bold mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] rounded-sm underline z-50">
                       <a href="/sign-in">Try now &nbsp;&nbsp;&gt;</a>
                     </button>
                   </div>
                   <div>
-                    <button className="text-lg font-bold mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] rounded-sm underline">
+                    <button className="text-lg font-bold  mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] rounded-sm underline z-">
                       <a href="/sign-in">Schedule now &nbsp;&nbsp;&gt;</a>
                     </button>
                   </div>
