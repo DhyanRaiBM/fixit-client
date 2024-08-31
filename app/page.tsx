@@ -160,12 +160,12 @@ const Homepage = () => {
                 ></div>
                 <div className="flex flex-row gap-12 md:gap-24">
                   <div>
-                    <button className="text-lg  font-bold mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] rounded-sm underline z-50">
+                    <button className="text-lg  font-bold mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] rounded-sm underline relative z-50">
                       <a href="/sign-in">Try now &nbsp;&nbsp;&gt;</a>
                     </button>
                   </div>
                   <div>
-                    <button className="text-lg font-bold  mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] rounded-sm underline z-">
+                    <button className="text-lg font-bold  mt-12 animate-in slide-in-from-bottom-14 duration-700 text-[#e46e26] hover:text-[#EDC0C0] relative rounded-sm underline z-">
                       <a href="/sign-in">Schedule now &nbsp;&nbsp;&gt;</a>
                     </button>
                   </div>
